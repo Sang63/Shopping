@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/topic/topic",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#911005",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/1-1.png",
+        "selectedIconPath": "images/1-2.png"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "text": "专题",
+        "iconPath": "images/2-2.png",
+        "selectedIconPath": "images/2-1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "images/3-1.png",
+        "selectedIconPath": "images/3-2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/4-1.png",
+        "selectedIconPath": "images/4-2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/5-1.png",
+        "selectedIconPath": "images/5-2.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Shopping",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

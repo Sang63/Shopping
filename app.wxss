@@ -1,0 +1,8 @@
+/**app.wxss**/
+/**app.wxss**/
+page {
+  font-family: "黑体";
+  font-size: 28rpx;
+  color: #333;
+  background: #efefef;
+}
