@@ -9,7 +9,7 @@
         ]
     },
     "setting": {
-        "urlCheck": true,
+        "urlCheck": false,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -42,7 +42,7 @@
             {
                 "packageJsonPath": "./package.json",
                 "miniprogramNpmDistDir": "./"
-              }
+            }
         ],
         "minifyWXSS": true,
         "disableUseStrict": false,

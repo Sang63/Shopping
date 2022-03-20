@@ -1,2 +1,24 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="header">
+    <image src="{{avatar}}" mode="widthFix"></image>
+    <view class="center" bindtap="onClickShow">{{nickname}}</view>
+    <van-icon wx:if="{{isLogin}}" name="cross" bindtap="logout"/>
+    <van-icon wx:else name="arrow" />
+</view>
+<van-grid column-num="3" square>
+    <van-grid-item wx:for="{{gridArr}}" wx:key="index" icon="{{item.icon}}" text="{{item.txt}}" />
+</van-grid>
+
+
+<view class="myoverlay" wx:if="{{show}}">
+    <view class="myoverlay_bg"  bindtap="onClickHide"></view>
+    <view class="wrapper">
+        <van-cell-group>
+            <van-field model:value="{{username}}" required clearable label="用户名"  placeholder="请输入用户名" bind:click-icon="onClickIcon" />
+            <van-field model:value="{{password}}" type="password" label="密码" placeholder="请输入密码" required border="{{ false }}" />
+
+            <van-button type="danger" block round bindtap="submitFn">登陆/注册</van-button>
+        </van-cell-group>
+    </view>
+</view>
+
+<van-dialog id="van-dialog" />
