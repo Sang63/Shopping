@@ -91,6 +91,31 @@ Page({
                 show:false,
                 isLogin:true
             })
+            //判断是否从其他页面重定向
+            let route = wx.getStorageSync('route');
+            if(route){
+                //从其他页面跳转过来
+                switch(route){
+                  case "/pages/home/home":
+                      wx.switchTab({url: route,});
+                      break;
+                      case "/pages/category/category":
+                      wx.switchTab({url: route,});
+                      break;
+                      case "/pages/topic/topic":
+                      wx.switchTab({url: route,});
+                      break;
+                      case "/pages/cart/cart":
+                      wx.switchTab({url: route,});
+                      break;
+                      default:
+                          wx.navigateTo({
+                            url: route,
+                          });break;
+            
+                }
+                wx.removeStorageSync('route')
+            }
           }
       })
     },

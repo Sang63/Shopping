@@ -15,6 +15,11 @@ Page({
       })
           
     },
+    goPopup(){
+      wx.navigateTo({
+        url: '/pages/popup/popup',
+      })
+    },
 
     onReady: function () {
 

@@ -1,0 +1,4 @@
+<van-cell-group>
+  <van-cell wx:for="{{arr}}" wx:key="index" title="{{item}}" data-myitem="{{item}}" bindtap="goSearch" />
+</van-cell-group>
+<view class="nomore">没有更多了</view>

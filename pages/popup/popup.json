@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  "history":"/components/history/history",
+  "list":"/components/list/list",
+  "goods":"/components/goods/goods"
+ }
+}

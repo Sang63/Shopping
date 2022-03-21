@@ -1,22 +1,48 @@
 var api = require('./api.js')
 var request = require('./request.js')
 
-// get请求不携带参数
+// 获取首页数据
 function getHome() {
   return request.requestApi({
     url: api.homeApi
   })
 }
 
-// // get请求携带参数
-// function getList(params) {
-//   return request.requestApi({
-//     url: api.listApi,
-//     data: params,
-//   })
-// }
+//搜索窗口数据
+function getSearch() {
+  return request.requestApi({
+    url: api.searchApi,
+    header: {
+      'X-Nideshop-Token':wx.getStorageSync('token') || '',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+  })
+}
 
-// post请求
+// 实时搜索
+function searchData(params) {
+  return request.requestApi({
+    url: api.searchDataApi,
+    data: params,
+    header: {
+      'X-Nideshop-Token':wx.getStorageSync('token') || '',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+  })
+}
+//商品搜索
+function GoodsSearch(params) {
+  return request.requestApi({
+    url: api.goodsDataApi,
+    data: params,
+    header: {
+      'X-Nideshop-Token':wx.getStorageSync('token') || '',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+  })
+}
+
+// 登录
 function LoginFn(params) {
   return request.requestApi({
     url: api.loginApi,
@@ -28,8 +54,24 @@ function LoginFn(params) {
   })
 }
 
+//清除历史记录
+function clearHistoryFn() {
+  return request.requestApi({
+    url: api.clearHistoryApi,
+    header: {
+      'X-Nideshop-Token':wx.getStorageSync('token') || '',
+      'content-type': 'application/x-www-form-urlencoded'
+    },
+    method: 'POST'
+  })
+}
+
 module.exports = {
-  getHome: getHome,
-  LoginFn: LoginFn,
+  getHome,
+  LoginFn,
+  getSearch,
+  clearHistoryFn,
+  searchData,
+  GoodsSearch
   
 }

@@ -1,0 +1,14 @@
+Component({
+    properties:{
+        arr:{
+            type:Array,
+            value:[]
+        }
+    },
+    methods:{
+        goSearch(e){
+            //子传父，通知父级执行搜索
+            this.triggerEvent("goSearchFn",e.currentTarget.dataset.myitem)
+        }
+    }
+})

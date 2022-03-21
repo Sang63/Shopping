@@ -1,0 +1,22 @@
+.history_hot .history {
+  background: #fff;
+  padding: 20rpx;
+}
+.history_hot .history .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.history_hot .history .top .title {
+  font-size: 32rpx;
+}
+.history_hot .history .down {
+  margin-top: 20rpx;
+}
+.history_hot .history .down .mytag {
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+.hot {
+  margin-top: 40rpx;
+}

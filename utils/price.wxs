@@ -1,0 +1,6 @@
+function priceFilter(val){
+    return "¥ " + Number(val).toFixed(2) + " 元";
+}
+module.exports = {
+    priceFilter:priceFilter
+}

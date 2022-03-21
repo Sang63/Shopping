@@ -1,0 +1,12 @@
+<van-search
+  value="{{value}}"
+  bind:change="inputFn"
+  placeholder="{{defaultKeyword.keyword}}"
+  show-action
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+/>
+
+<history wx:if="{{num===1}}" bind:refresh="refresh" historyarr="{{historyKeywordList}}" hotarr="{{hotKeywordList}}" bind:goSearchFn="goSearchFn" />
+<list wx:elif="{{num===2}}" arr="{{listArr}}" bind:goSearchFn="goSearchFn" />
+<goods wx:else goodsList="{{goodsList}}" filterCategory="{{filterCategory}}" categoryCurrent="{{categoryCurrent}}" bind:changePrice="changePriceFn" />

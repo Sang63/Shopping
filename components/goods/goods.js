@@ -1,0 +1,29 @@
+Component({
+    data:{
+        price:"",
+        priceArr:[
+            { text: '价格由高到低', value: "desc"},
+            { text: '价格由低到高', value: "asc"},
+        ],
+    },
+    properties:{
+        goodsList:{
+            type:Array,
+            value:[]
+        },
+        filterCategory:{
+            type:Array,
+            value:[]
+        },
+        categoryCurrent:{
+            type:Number,
+            value:-1
+        }
+    },
+    methods:{
+        priceChange(value){
+            console.log(value.detail);
+            this.triggerEvent("changePrice",value.detail)
+        }
+    }
+})

@@ -1,0 +1,25 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+  background: #fff;
+}
+.product .li {
+  width: 49%;
+  text-align: center;
+  padding-bottom: 20rpx;
+}
+.product .li image {
+  display: block;
+  width: 100%;
+}
+.product .li .title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+}
+.product .li .price {
+  color: #f00;
+}

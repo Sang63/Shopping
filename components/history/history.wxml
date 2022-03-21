@@ -1,0 +1,20 @@
+<view class="history_hot">
+    <view class="history">
+        <view class="top">
+            <view class="title">历史记录</view>
+            <van-icon name="delete-o"  size="1.5em" bindtap="clearHistory" />
+        </view>
+        <view class="down">
+            <van-tag bindtap="goSearch" data-myitem="{{item}}" custom-class="mytag" wx:for="{{historyarr}}" wx:key="index" plain>{{item}}</van-tag>
+        </view>
+    </view>
+
+    <view class="history hot">
+        <view class="top">
+            <view class="title">热门搜索</view>
+        </view>
+        <view class="down">
+            <van-tag bindtap="goSearch" data-myitem="{{item.keyword}}" custom-class="mytag" wx:for="{{hotarr}}" plain wx:key="index" type="{{item.is_hot===1?'danger':'default'}}">{{item.keyword}}</van-tag>
+        </view>
+    </view>
+</view>

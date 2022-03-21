@@ -9,10 +9,19 @@
 var homeApi = baseUrl + '/index/index'
 //登录接口（没有账号自动注册）
 var loginApi = baseUrl + '/auth/loginByWeb'
-// var listApi = baseUrl + '/topic/list'
-
+//搜索窗口数据
+var searchApi = baseUrl + '/search/index'
+//清除历史记录
+var clearHistoryApi = baseUrl + '/search/clearhistory'
+//事实搜索
+var searchDataApi = baseUrl + '/search/helper'
+//搜索框商品搜索
+var goodsDataApi = baseUrl + '/goods/list'
 module.exports = {
   homeApi: homeApi,
-  // listApi: listApi,
-  loginApi: loginApi
+  searchApi: searchApi,
+  loginApi: loginApi,
+  clearHistoryApi:clearHistoryApi,
+  searchDataApi:searchDataApi,
+  goodsDataApi:goodsDataApi
 }

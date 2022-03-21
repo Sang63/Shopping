@@ -1,0 +1,30 @@
+const {clearHistoryFn}=require("../../request/fetch")
+Component({
+    properties:{
+        historyarr:{
+            type:Array
+        },
+        hotarr:{
+            type:Array
+        },
+    },
+    methods:{
+        clearHistory(){
+            clearHistoryFn().then(res=>{
+                if(res.errno===0){
+                    console.log(res);
+                    wx.showToast({
+                      title: '删除成功',
+                      icon:'success',
+                      duration:2000
+                    })
+                    this.triggerEvent("refresh")
+                }
+            })
+        },
+        goSearch(e){
+            //子传父，通知父级执行搜索
+            this.triggerEvent("goSearchFn",e.currentTarget.dataset.myitem)
+        }
+    }
+})

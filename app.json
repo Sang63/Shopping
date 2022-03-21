@@ -6,7 +6,13 @@
     "pages/topic/topic",
     "pages/category/category",
     "pages/cart/cart",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/popup/popup",
+    "components/history/history",
+    "components/list/list",
+    "components/goods/goods",
+    "components/product/product",
+    "custom-tab-bar/index"
   ],
   
   "tabBar": {
@@ -58,7 +64,10 @@
     "van-grid-item": "@vant/weapp/grid-item/index",
     "van-icon": "@vant/weapp/icon/index",
     "van-overlay": "@vant/weapp/overlay/index",
-    "van-field": "@vant/weapp/field/index"
+    "van-field": "@vant/weapp/field/index",
+    "van-tag": "@vant/weapp/tag/index",
+  "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+  "van-dropdown-item": "@vant/weapp/dropdown-item/index"
   },
   "sitemapLocation": "sitemap.json"
 }
