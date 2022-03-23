@@ -1,0 +1,6 @@
+<!--components/tips/tips.wxml-->
+<van-row >
+  <van-col custom-class="mycol" span="8"><van-icon color="darkred" name="checked" />30天无忧退货</van-col>
+  <van-col custom-class="mycol" span="8"><van-icon color="darkred" name="checked" />48小时快速退费</van-col>
+  <van-col custom-class="mycol" span="8"><van-icon color="darkred" name="checked" />满88元免运费</van-col>
+</van-row>

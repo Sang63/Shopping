@@ -1,0 +1,6 @@
+<template name="mytitle">
+<view class="mytitle">
+<view class="line"></view>
+<view class="content">{{content}}</view>
+</view>
+</template>

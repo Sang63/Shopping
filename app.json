@@ -1,25 +1,26 @@
 {
-  "pages":[
-
+  "pages": [
+    "pages/cart/cart",
     "pages/user/user",
     "pages/home/home",
     "pages/topic/topic",
     "pages/category/category",
-    "pages/cart/cart",
+
     "pages/logs/logs",
     "pages/popup/popup",
     "components/history/history",
     "components/list/list",
+    "components/tips/tips",
     "components/goods/goods",
     "components/product/product",
-    "custom-tab-bar/index"
+    "custom-tab-bar/index",
+    "pages/details/details"
   ],
-  
+
   "tabBar": {
     "color": "#333",
     "selectedColor": "#911005",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "images/1-1.png",
@@ -51,11 +52,11 @@
       }
     ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Shopping",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -66,8 +67,22 @@
     "van-overlay": "@vant/weapp/overlay/index",
     "van-field": "@vant/weapp/field/index",
     "van-tag": "@vant/weapp/tag/index",
-  "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
-  "van-dropdown-item": "@vant/weapp/dropdown-item/index"
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
+
   },
   "sitemapLocation": "sitemap.json"
 }

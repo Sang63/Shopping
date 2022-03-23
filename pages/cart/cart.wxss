@@ -1,1 +1,21 @@
-/* pages/cart/cart.wxss */
+.van-checkbox__label {
+  flex: 1;
+}
+.van-checkbox {
+  margin: 0 4%;
+  padding: 10rpx;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.selectAllcheckbox {
+  border: 0;
+  padding: 0;
+  width: 80px;
+}
+.van-checkbox-group {
+  padding-right: 4%;
+}
+.del,
+.del .van-button {
+  height: 100%;
+}

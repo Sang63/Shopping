@@ -1,0 +1,66 @@
+<view class="detail_page" style="height: {{isIphoneX ? 'calc(100% - 68rpx)' : '100%'}}">
+    <swiper class="myswiper" indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="darkred">
+        <swiper-item wx:for="{{gallery}}" wx:key="id">
+            <image src="{{item.img_url}}"></image>
+        </swiper-item>
+    </swiper>
+    <tips />
+
+    <wxs src="../../utils/price.wxs" module="tool"></wxs>
+    <view class="good_info">
+        <view class="title ellipsis">{{info.name}}</view>
+        <view class="desc ellipsis">{{info.goods_brief}}</view>
+        <view class="price">{{tool.priceFilter(info.retail_price)}}</view>
+    </view>
+
+    <van-cell title="展示弹出层" bindtap="openSku" is-link />
+
+    <view class="canshu">
+        <view class="title">商品参数</view>
+        <view class="ul">
+            <view class="li" wx:for="{{attribute}}" wx:key="index">
+                <view class="span">{{item.name}}</view>
+                <view class="strong ellipsis">{{item.value}}</view>
+            </view>
+        </view>
+    </view>
+
+
+    <rich-text nodes="{{info.goods_desc}}"></rich-text>
+
+    <import src="./title"></import>
+    <template is="mytitle" data="{{content:'常见问题'}}"></template>
+    <view class="issue">
+        <block wx:for="{{issue}}" wx:key="index">
+            <view class="question">{{item.question}}</view>
+            <view class="answer">{{item.answer}}</view>
+        </block>
+    </view>
+    <template is="mytitle" data="{{content:'相关产品'}}"></template>
+    <product goodsList="{{goodsList}}" />
+
+    <view class="sku" wx:if="{{isShowSku}}">
+        <view class="sku_bg" bindtap="closeSku"></view>
+        <view class="sku_content" style="bottom: {{isIphoneX ? '168rpx' : '100rpx'}}">
+            <van-icon name="cross" custom-class="mycross" bindtap="closeSku" />
+            <view class="sku_top">
+                <image class="sku_img"  src="{{info.list_pic_url}}"></image>
+                <view class="info">
+                    <view>价格：{{tool.priceFilter(info.retail_price)}}</view>
+                    <view>库存：{{info.goods_number}}</view>
+                </view>
+            </view>
+            <view class="sku_down">
+                <view class="num">数量:</view>
+                <van-stepper value="{{stepNum}}" bind:change="onChange" min="1" max="{{info.goods_number}}" />
+            </view>
+        </view>
+    </view>
+
+</view>
+<van-goods-action>
+    <van-goods-action-icon icon="{{isSaved ? 'star' : 'star-o'}}" text="{{isSaved ? '收藏' : '未收藏'}}" bind:click="saveClick" />
+    <van-goods-action-icon icon="cart-o" text="购物车" info="{{goodsCount}}" bind:click="goCart" />
+    <van-goods-action-button text="加入购物车" type="warning" bind:click="addToCart" />
+    <van-goods-action-button text="立即购买" bind:click="buyNow" />
+</van-goods-action>

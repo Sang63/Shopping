@@ -23,7 +23,11 @@ Component({
     methods:{
         priceChange(value){
             console.log(value.detail);
-            this.triggerEvent("changePrice",value.detail)
+            this.triggerEvent("changePriceFn",value.detail)
+        },
+        cateporyChange(value){
+            console.log(value.detail);
+            this.triggerEvent("changeCategoryFn",value.detail)
         }
     }
 })

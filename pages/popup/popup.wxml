@@ -9,4 +9,4 @@
 
 <history wx:if="{{num===1}}" bind:refresh="refresh" historyarr="{{historyKeywordList}}" hotarr="{{hotKeywordList}}" bind:goSearchFn="goSearchFn" />
 <list wx:elif="{{num===2}}" arr="{{listArr}}" bind:goSearchFn="goSearchFn" />
-<goods wx:else goodsList="{{goodsList}}" filterCategory="{{filterCategory}}" categoryCurrent="{{categoryCurrent}}" bind:changePrice="changePriceFn" />
+<goods wx:else goodsList="{{goodsList}}" filterCategory="{{filterCategory}}" categoryCurrent="{{categoryCurrent}}" bind:changePriceFn="changePriceFn" bind:changeCatecoryFn="changePCatecoryFn" />

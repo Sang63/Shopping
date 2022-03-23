@@ -1,0 +1,5 @@
+/* components/tips/tips.wxss */
+.mycol{
+    padding: 10rpx 0;
+    text-align: center;
+}

@@ -35,7 +35,12 @@ Page({
       this.setData({order:val.detail,sort:"price"},()=>{
           this.onSearch();
       });
-
+    },
+    changeCategory(val){
+        //分类排序   
+        this.getData({categoryID:val.detail,sort:"id"},()=>{
+            this.onSearch();
+        })
     },
     onSearch(){
         //执行搜索，并且跳转到区块3（goods区块）

@@ -2,7 +2,7 @@
     <van-dropdown-menu>
         <van-dropdown-item title="综合" disabled/>
         <van-dropdown-item bind:change="priceChange" title="价格" value="{{price}}" options="{{priceArr}}" />
-        <van-dropdown-item title="分类" value="{{categoryCurrent}}" options="{{filterCategory}}" />
+        <van-dropdown-item bind:change="categoryChange" title="分类" value="{{categoryCurrent}}" options="{{filterCategory}}" />
     </van-dropdown-menu>
     <product goodsList="{{goodsList}}" />
 </view>
